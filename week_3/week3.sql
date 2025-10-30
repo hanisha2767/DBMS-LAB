@@ -156,8 +156,7 @@ WHERE assets_in_lakhs > ALL (
 DELETE FROM bankAccount
 WHERE branch_name IN (
     SELECT branch_name FROM branch WHERE branch_city = 'Bombay'
-);
-
+); 
 UPDATE bankAccount
 SET balance = balance * 1.05;
 
